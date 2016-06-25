@@ -35,6 +35,9 @@ sigma <- 500
 x <- 1:10000
 ```
 
+***
+
+
 ```r
 plot(x, y = gaussian_fn(x, mu, sigma), xlab = "", ylab = "Density", type = 'l')
 ```
@@ -56,6 +59,8 @@ planck_fn <- function(x, a) {
 }
 x <- 1:10000
 ```
+
+***
 
 
 ```r

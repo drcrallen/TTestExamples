@@ -824,7 +824,7 @@ t = \frac{\mu_1 - \mu_2}{\sqrt{(var_1 + var_2)/n}}
 </section>
 <section data-transition="linear" data-transition-speed="default">
 <h3>Normal distribution t-test</h3>
-<div class="slideContent" >
+<div class="column column1 slideContent" >
 <p>A simple t-test is often performed against normally distributed data of the type below:</p>
 
 <pre><code class="r">gaussian_fn &lt;- function(x, mu, sigma) {
@@ -834,6 +834,12 @@ mu &lt;- 5000
 sigma &lt;- 500
 x &lt;- 1:10000
 </code></pre>
+
+
+</div>
+
+<div class="column column2 slideContent" >
+
 
 <pre><code class="r">plot(x, y = gaussian_fn(x, mu, sigma), xlab = &quot;&quot;, ylab = &quot;Density&quot;, type = &#39;l&#39;)
 </code></pre>
@@ -847,7 +853,7 @@ x &lt;- 1:10000
 </section>
 <section data-transition="linear" data-transition-speed="default">
 <h3>Non-normal distribution</h3>
-<div class="slideContent" >
+<div class="column column1 slideContent" >
 <p>For a distribution with a long-tail, we can use <a href="https://en.wikipedia.org/wiki/Planck%27s_law">Planck&#39;s law</a>. When ignoring scaling factors, this takes the general form of:</p>
 
 <pre><code class="r">planck_fn &lt;- function(x, a) {
@@ -858,6 +864,12 @@ x &lt;- 1:10000
 }
 x &lt;- 1:10000
 </code></pre>
+
+
+</div>
+
+<div class="column column2 slideContent" >
+
 
 <pre><code class="r">plot(x, y = planck_fn(x / 500, 10), xlab = &quot;&quot;, ylab = &quot;Density&quot;, type = &#39;l&#39;)
 </code></pre>

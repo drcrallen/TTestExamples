@@ -33,6 +33,9 @@ mu <- 5000
 sigma <- 500
 x <- 1:10000
 ```
+
+***
+
 ```{r, fig.width=6, fig.height=4, fig.align='center'}
 plot(x, y = gaussian_fn(x, mu, sigma), xlab = "", ylab = "Density", type = 'l')
 ```
@@ -51,6 +54,8 @@ planck_fn <- function(x, a) {
 }
 x <- 1:10000
 ```
+
+***
 
 ```{r, fig.width=6, fig.height=4, fig.align='center'}
 plot(x, y = planck_fn(x / 500, 10), xlab = "", ylab = "Density", type = 'l')
