@@ -19,48 +19,48 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
        sliderInput("ShiftPlanck1",
-                   "Shift of Planck Distribution 1:",
+                   "Adjust this to move the peak of Planck 1",
                    min = 1,
                    max = 1000,
                    value = 200),
        sliderInput("FormPlanck1",
-                   "Form of Planck Distribution 1:",
+                   "Adjust this to flatten or tighten out the distribution of Planck 1",
                    min = 1,
                    max = 100,
                    value = 50),
        sliderInput("ShiftPlanck2",
-                   "Shift of Planck Distribution 2:",
+                   "Adjust this to move the peak of Planck 2",
                    min = 1,
                    max = 1000,
                    value = 500),
        sliderInput("FormPlanck2",
-                   "Form of Planck Distribution 2:",
+                   "Adjust this to flatten or tighten the distribution of Planck 2",
                    min = 1,
                    max = 100,
                    value = 50),
        
        sliderInput("ShiftNorm1",
-                   "Shift of Normal Distribution 1:",
+                   "Adjust this to move the peak of Normal 1",
                    min = 1,
                    max = 1000,
                    value = 200),
        sliderInput("FormNorm1",
-                   "Form of Normal Distribution 1:",
+                   "Adjust this to decrease or increase the variance of Normal 1",
                    min = 1,
                    max = 100,
                    value = 50),
        sliderInput("ShiftNorm2",
-                   "Shift of Norm Distribution 2:",
+                   "Adjust this to move the peak of Normal 2",
                    min = 1,
                    max = 1000,
                    value = 500),
        sliderInput("FormNorm2",
-                   "Form of Norm Distribution 2:",
+                   "Adjust this to decrease or increase the variance of Normal 2",
                    min = 1,
                    max = 100,
                    value = 50),
        sliderInput("sampleSize",
-                   "Assumed Sample Size:",
+                   "Adjust this to set the assumed sample size. Larger samples yield higher confidence in results (lower p-values)",
                    min = 2,
                    max = 100,
                    value = 10)
@@ -68,9 +68,9 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlotPlanck"),
-       plotOutput("distPlotNorm"),
-       tableOutput("ttestTable")
+        span("Planck-like distributions (long-tail)", plotOutput("distPlotPlanck")),
+        span("Normal distributions", plotOutput("distPlotNorm")),
+        span("Results for Gaussian and Planck-like distributions. meanDelta is the difference in the mean. SE is the standard error. tValue is the t-value and pValue is the p value. Lower p value indicates more confidence there is a chagne between the two distributions.", tableOutput("ttestTable"))
     )
   )
 ))
