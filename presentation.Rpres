@@ -54,4 +54,4 @@ TTestExamples
 ========================================================
 t-test examples are [hosted online](https://allen-net.shinyapps.io/TTestExamples/) as an educational tool and allow easy manipulation of a normal and a long-tail distribution to see the effect on the p-value (same-ness statistic) for visually simmilar distributions.
 
-The source is hosted on [github](https://github.com/drcrallen/TTestExamples)
+The sources for the app and this presentation are hosted on [github](https://github.com/drcrallen/TTestExamples)
